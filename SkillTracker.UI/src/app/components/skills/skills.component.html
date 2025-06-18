@@ -1,0 +1,40 @@
+<div class="p-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Skill Tracker</h2>
+
+    <form (ngSubmit)="addSkill()" class="grid grid-cols-2 gap-2 mb-4">
+        <input type="text" [(ngModel)]="newSkill.name" name="name" placeholder="Name" class="p-2 border rounded" required ><br>
+        <input type="text" [(ngModel)]="newSkill.type" name="type" placeholder="Type" class="p-2 border rounded" required><br>
+        <input type="text" [(ngModel)]="newSkill.level" name="level" placeholder="Level" class="p-2 border rounded" required><br>
+        <input type="text" [(ngModel)]="newSkill.rating" name="rating" placeholder="Rating" class="p-2 border rounded" required><br>
+        <button class="btn btn-success" type="submit">Add Skill</button>
+    </form>
+
+    <br><hr>
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error" class="text-red-500">{{error}}</div>
+
+    <table *ngIf="!loading && skills.length" class="w-full border border-collapse">
+        <thead class="bg-gray-200">
+            <tr>
+                <th class="p-2 border">ID</th>
+                <th class="p-2 border">Name</th>
+                <th class="p-2 border">Type</th>
+                <th class="p-2 border">Level</th>
+                <th class="p-2 border">Rating</th>
+                <th class="p-2 border">Delete</th>
+                <th class="p-2 border">Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let skill of skills" class="hover:bg-gray-50">
+                <td class="p-2 border">{{skill.id}}</td>
+                <td class="p-2 border">{{skill.name}}</td>
+                <td class="p-2 border">{{skill.type}}</td>
+                <td class="p-2 border">{{skill.level}}</td>
+                <td class="p-2 border">{{skill.rating}}</td>
+                <td class="p-2 border"><button (click)="deleteSkill(skill.id)" class="btn btn-danger">Delete</button></td>
+                <td class="p-2 border"><button (click)="updateSkill(skill.id)" class="btn btn-primary">Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
