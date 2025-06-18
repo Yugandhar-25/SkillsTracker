@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LqMAIdtt0rq7k7LgIO+J+VTtVMo6Vqc7hLQVmApx8oU=",
+  "Source": "SkillsTracker.API",
+  "BasePath": "_content/SkillsTracker.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
