@@ -1,0 +1,35 @@
+# -------------------------------
+# Angular (SkillsTracker.UI)
+# -------------------------------
+SkillsTracker.UI/node_modules/
+SkillsTracker.UI/dist/
+SkillsTracker.UI/.angular/
+SkillsTracker.UI/.env
+SkillsTracker.UI/.output/
+SkillsTracker.UI/.vscode/
+SkillsTracker.UI/npm-debug.log*
+SkillsTracker.UI/yarn-debug.log*
+SkillsTracker.UI/yarn-error.log*
+
+# -------------------------------
+# .NET (SkillsTracker.API)
+# -------------------------------
+SkillsTracker.API/bin/
+SkillsTracker.API/obj/
+SkillsTracker.API/.vs/
+SkillsTracker.API/*.user
+SkillsTracker.API/*.suo
+SkillsTracker.API/*.dbmdl
+SkillsTracker.API/*.log
+SkillsTracker.API/*.sqlite
+SkillsTracker.API/Properties/launchSettings.json
+
+# -------------------------------
+# Global (common)
+# -------------------------------
+*.log
+.env
+*.env.local
+.vscode/
+.DS_Store
+Thumbs.db
